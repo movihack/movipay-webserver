@@ -32,6 +32,7 @@ class AliveToken(models.Model):
     beginning_at = models.DateTimeField()
     end_at = models.DateTimeField()
     local = JSONField()
+    active = models.BooleanField(default=True)
 
 class Input(models.Model):
    """A model that tracks the user's inputs"""
