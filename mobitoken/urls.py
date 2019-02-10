@@ -58,5 +58,5 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^clients/', include('api.urls', namespace='api')),
     url(r'^obter-token/(?P<latitude>(([0-9]+)\.([0-9]+)),(?P<longitude>(([0-9]+)\.([0-9]+))))$', obterToken),
-    url(r'^validar-token/(?P<latitude>(([0-9]+)\.([0-9]+)),(?P<longitude>(([0-9]+)\.([0-9]+))))$', validarToken),
+    url(r'^validar-token/(?P<token>([0-9]+))/(?P<latitude>(([0-9]+)\.([0-9]+)),(?P<longitude>(([0-9]+)\.([0-9]+))))$', validarToken),
 ]
